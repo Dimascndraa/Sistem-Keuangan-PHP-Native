@@ -76,7 +76,7 @@
 
     <span style="color: white;">
       <center>
-    <a href="https://setiawan007.github.io/"><strong>Copyright &copy; 2022</strong> - Sistem Informasi Keuangan</a>
+        <a href="https://dimascndraa.github.io/"><strong>Copyright &copy; 2022</strong> - Sistem Informasi Keuangan</a>
       </center>
     </span></p>
 
