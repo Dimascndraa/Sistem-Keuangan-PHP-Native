@@ -28,7 +28,3 @@ Aplikasi ini dibuat dengan menggunakan PHP Native dan menggunakan MySQL sebagai 
 18 - Terdapat grafik pengeluaran dan pemasukan setiap tahun<br>
 19 - Pengguna memiliki foto profil yang bisa diubah sendiri<br>
 20 - Login multi user (Administrator dan manajemen)<br>
-
-# Support Me
-<br>
-<a href="https://sociabuzz.com/setiawan007/support" target="_blank"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" height="32px" alt="Sociabuzz"></a>
