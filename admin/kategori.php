@@ -20,7 +20,7 @@
 
           <div class="box-header">
             <h3 class="box-title">Kategori Transaksi Keuangan</h3>
-            <div class="btn-group pull-right">            
+            <div class="btn-group pull-right">
 
               <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal">
                 <i class="fa fa-plus"></i> &nbsp Tambah Kategori
@@ -68,29 +68,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php 
+                  <?php
                   include '../koneksi.php';
-                  $no=1;
-                  $data = mysqli_query($koneksi,"SELECT * FROM kategori ORDER BY kategori ASC");
-                  while($d = mysqli_fetch_array($data)){
-                    ?>
+                  $no = 1;
+                  $data = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY kategori ASC");
+                  while ($d = mysqli_fetch_array($data)) {
+                  ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $d['kategori']; ?></td>
-                      <td>    
-                        <?php 
-                        if($d['kategori_id'] != 1){
-                          ?> 
-                          <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit_kategori_<?php echo $d['kategori_id'] ?>">
-                            <i class="fa fa-cog"></i>
-                          </button>
+                      <td>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit_kategori_<?php echo $d['kategori_id'] ?>">
+                          <i class="fa fa-cog"></i>
+                        </button>
 
-                          <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_kategori_<?php echo $d['kategori_id'] ?>">
-                            <i class="fa fa-trash"></i>
-                          </button>
-                          <?php 
-                        }
-                        ?>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_kategori_<?php echo $d['kategori_id'] ?>">
+                          <i class="fa fa-trash"></i>
+                        </button>
 
                         <form action="kategori_update.php" method="post">
                           <div class="modal fade" id="edit_kategori_<?php echo $d['kategori_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -145,7 +139,7 @@
 
                       </td>
                     </tr>
-                    <?php 
+                  <?php
                   }
                   ?>
                 </tbody>

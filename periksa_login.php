@@ -1,4 +1,4 @@
-<?php 
+<?php
 // menghubungkan dengan koneksi
 include 'koneksi.php';
 
@@ -9,7 +9,7 @@ $password = md5($_POST['password']);
 $login = mysqli_query($koneksi, "SELECT * FROM user WHERE user_username='$username' AND user_password='$password'");
 $cek = mysqli_num_rows($login);
 
-if($cek > 0){
+if ($cek > 0) {
 	session_start();
 	$data = mysqli_fetch_assoc($login);
 	$_SESSION['id'] = $data['user_id'];
@@ -17,15 +17,15 @@ if($cek > 0){
 	$_SESSION['username'] = $data['user_username'];
 	$_SESSION['level'] = $data['user_level'];
 
-	if($data['user_level'] == "administrator"){
+	if ($data['user_level'] == "administrator") {
 		$_SESSION['status'] = "administrator_logedin";
 		header("location:admin/");
-	}else if($data['user_level'] == "manajemen"){
+	} else if ($data['user_level'] == "manajemen") {
 		$_SESSION['status'] = "manajemen_logedin";
 		header("location:manajemen/");
-	}else{
+	} else {
 		header("location:index.php?alert=gagal");
 	}
-}else{
+} else {
 	header("location:index.php?alert=gagal");
 }
